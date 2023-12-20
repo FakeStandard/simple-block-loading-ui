@@ -1,4 +1,5 @@
 
+// 取得 Sign in 按鈕元素
 const el = document.getElementById('btnSign')
 
 // 透過 callback 函數對 click 事件新增事件處理器
@@ -16,6 +17,6 @@ function toggleLoading(show) {
     document.querySelector('.loading').style.display = show ? 'block' : 'none'
 }
 
-
-// 透過提供回呼函數的方式對「click」事件新增處理器。
-// 當元素被點選後會出現「Element clicked!」的彈出訊息。
+// 顯示 tooltip
+const tooltip = bootstrap.Tooltip.getOrCreateInstance(el) // Returns a Bootstrap tooltip instance
+tooltip.show()
